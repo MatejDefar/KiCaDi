@@ -2,7 +2,8 @@
   <div class="login-stranica">
     <div class="login-kartica">
       <div class="logo">
-        <span class="logo-ki">Ki</span><span class="logo-ca">Ča</span><span class="logo-di">Di</span>
+        <span class="logo-ki">Ki</span><span class="logo-ca">Ča</span
+        ><span class="logo-di">Di</span>
       </div>
 
       <div class="tabovi">
@@ -20,7 +21,6 @@
         </button>
       </div>
 
-
       <form v-if="aktivniTab === 'registracija'" @submit.prevent="registracija">
         <div class="polje">
           <input
@@ -32,13 +32,7 @@
           />
         </div>
         <div class="polje">
-          <input
-            v-model="email"
-            class="input-field"
-            type="email"
-            placeholder="Email"
-            required
-          />
+          <input v-model="email" class="input-field" type="email" placeholder="Email" required />
         </div>
         <div class="polje">
           <input
@@ -55,16 +49,9 @@
         </button>
       </form>
 
-
       <form v-else @submit.prevent="prijava">
         <div class="polje">
-          <input
-            v-model="email"
-            class="input-field"
-            type="email"
-            placeholder="Email"
-            required
-          />
+          <input v-model="email" class="input-field" type="email" placeholder="Email" required />
         </div>
         <div class="polje">
           <input
@@ -97,14 +84,14 @@ export default {
       ime: '',
       email: '',
       lozinka: '',
-      ucitavanje: false
+      ucitavanje: false,
     }
   },
 
   computed: {
     authStore() {
       return useAuthStore()
-    }
+    },
   },
 
   methods: {
@@ -128,8 +115,8 @@ export default {
       } finally {
         this.ucitavanje = false
       }
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -148,7 +135,7 @@ export default {
   padding: 48px 40px;
   width: 100%;
   max-width: 400px;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
 }
 
 .logo {
@@ -158,9 +145,15 @@ export default {
   margin-bottom: 32px;
   letter-spacing: -0.5px;
 }
-.logo-ki  { color: #1a1a1a; }
-.logo-ca  { color: #c1432a; }
-.logo-di  { color: #c17a2a; }
+.logo-ki {
+  color: #1a1a1a;
+}
+.logo-ca {
+  color: #c1432a;
+}
+.logo-di {
+  color: #c17a2a;
+}
 
 .tabovi {
   display: flex;
@@ -187,7 +180,7 @@ export default {
   background: white;
   color: #1a1a1a;
   font-weight: 700;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .polje {
