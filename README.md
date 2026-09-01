@@ -1,44 +1,40 @@
-# .
+KiCaDi
 
-This template should help get you started developing with Vue 3 in Vite.
+Aplikacija za organizaciju i prijavu na događaje, s automatskim grupnim chatom kada se skupi dovoljno sudionika.
 
-## Recommended IDE Setup
+Tim
+Matej Defar
+Toni Pataj
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Fakultet informatike u Puli
+Kolegij: Programsko inženjerstvo
+Mentor: doc. dr. sc. Nikola Tanković
 
-## Recommended Browser Setup
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+Opis funkcionalnosti:
+KiCaDi omogućuje korisnicima prijavu/registraciju, kreiranje događaja s osnovnim podacima (naziv, kategorija, vrijeme, prag broja sudionika), pregled i filtriranje popisa događaja te prijavu na odabrani događaj. Kada broj prijavljenih sudionika dosegne zadani prag, automatski se otvara grupni chat za taj događaj u kojem sudionici mogu razmjenjivati poruke u stvarnom vremenu.
 
-## Customize configuration
+Javni prototip
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+https://kicadi.web.app
 
-## Project Setup
+Zaduženja po članu tima
 
-```sh
-npm install
-```
+Toni Pataj:
+Izrada prototipa u Figmi
+Sučelje za prijavu i registraciju (LoginView)
+Stranica s detaljima događaja- prikaz organizatora, sudionika i real-time praćenje promjena
+Pinia store za chat-slanje i real-time primanje poruka
+Sučelje grupnog chata (ChatView) s auto-scrollom i razlikovanjem poruka
+README dokumentacija i YouTube screencast
 
-### Compile and Hot-Reload for Development
 
-```sh
-npm run dev
-```
+Matej Defar:
+Inicijalno postavljanje projekta (Vue 3, Vite, Pinia, Vue Router, struktura foldera)
+Firebase konfiguracija i Pinia store za autentifikaciju (registracija, prijava, odjava)
+Vue Router s zaštitom ruta (navigation guards)
+Pinia store za događaje i početna stranica s prikazom i filtriranjem događaja
+Forma za kreiranje novog događaja
+Firestore sigurnosna pravila i javni URL
 
-### Compile and Minify for Production
 
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
