@@ -66,7 +66,7 @@
         <button class="btn-primary" type="submit" :disabled="ucitavanje">
           {{ ucitavanje ? 'Čekaj...' : 'Prijavi se' }}
         </button>
-        <p class="demo-hint">demo@primjer.hr · demo</p>
+        <p class="demo-hint">demo@primjer.hr · demoprijava</p>
       </form>
     </div>
   </div>
